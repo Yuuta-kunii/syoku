@@ -1,0 +1,39 @@
+.user-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url("kome.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.user-container {
+  margin-bottom: 80px;
+}
+
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-top: 40px;
+  color: #000080;
+  font-size: 40px;
+  font-family: serif;
+}
+
+.text-user {
+  color: #000080;
+  font-family: serif;
+}
+
+.btn-black {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 70px;
+  color: #fff;
+  border: 2px solid;
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.5);
+  
+}

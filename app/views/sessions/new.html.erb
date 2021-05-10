@@ -1,0 +1,24 @@
+<div class="user-new-wrapper">
+  <div class="container user-container">
+    <h2 class="text-center">ログイン画面</h2>
+    <div class="row">
+      <%= form_for :session,url: login_path do |f| %>
+      <div class="col-md-offset-4 col-md-4">
+        <div class="form-group">
+        <%= f.label :name,"名前",class:"text-user" %>
+        <%= f.text_field :name,class:"form-control" %>
+       </div>
+        <div class="form-group">
+          <%= f.label :email,"メールアドレス",class:"text-user" %>
+          <%= f.email_field :email,class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password,"パスワード",class:"text-user" %>
+          <%=f.password_field :password,class:"form-control" %>
+        </div>
+         <%= f.submit "ログイン",class:"btn btn-block btn-black" %>
+       <% end %>
+      </div>
+    </div>
+  </div> 
+</div>

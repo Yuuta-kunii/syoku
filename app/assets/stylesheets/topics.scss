@@ -1,0 +1,67 @@
+.topic-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url("tuti.JPG");
+  background-size: cover;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+}
+
+.topic-container {
+  margin-top: 40px;
+ 
+
+}
+
+
+h3 {
+  font-size: 30px;
+  font-family: serif;
+}
+
+textarea {
+  resize: none;
+  height: 400px;
+}
+
+.topic-index-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #c0c0c0;
+  background-repeat: repeat;
+ 
+}
+
+.topic-index-container {
+ margin-bottom: 50px;
+ display: flex;
+}
+
+h4 {
+  margin-top: 60px;
+  font-size: 40px;
+  font-family: serif;
+}
+
+.topic-index-single {
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+}
+  
+  .topic-image {
+    width: 100%;
+  }
+  
+  .topic-description {
+    color: #000;
+    font-family: serif;
+    font-size: 15px;
+    
+    h5 {
+      color: #000;
+      font-family: serif;
+      font-size: 15px;
+    }
+  }
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Syoku</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |key,value| %>
+    <div class="alert alert-<%= key %>" role="alert">
+      <%= value %>
+    </div>
+    <% end %>
+    
+    <nav class="navbar navbar-fixed-top navbar-transparent">
+      <div class="container">
+       <h6>
+         <%= link_to root_path do %>
+         <%= image_tag "hashi.png",class:"navbar-brand" %>
+        　フードスタイル
+         <% end %>
+        </6>
+        <ul class="navbar navbar-nav navbar-right">
+          <% if logged_in? %>
+          <li>
+            <%= link_to new_topic_path do %>
+            <%= image_tag "camera.png",class:"navbar-icon" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to topics_path do %>
+            <%= image_tag"book.png",class:"navbar-icon" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to favorites_path do %>
+            <%= image_tag "good.png",class:"navbar-icon" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to pages_shopping_path do %>
+            <%= image_tag "shopping",class:"navbar-icon" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to logout_path, method: :delete do %>
+            <%= image_tag "logout.png",class:"navbar-icon" %>
+          <% end %>
+          </li>
+        </ul>
+        <% else %>
+        <ul calss="navbar navbar-nav navbar-right">
+          <li>
+            <%= link_to new_user_path do %>
+            <%= image_tag "register.png",class:"navbar-icon" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to login_path do %>
+            <%= image_tag "login.png",class:"navbar-icon" %>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    
+    <%= yield %>
+    
+    <script>
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>
+  </body>
+</html>

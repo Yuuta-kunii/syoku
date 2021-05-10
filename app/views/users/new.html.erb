@@ -1,0 +1,28 @@
+<div class="user-new-wrapper">
+  <div class="container user-container">
+    <h2 class="text-center">登録画面</h2>
+    <div class="row">
+      <%= form_for @user do |f| %>
+      <div class="col-md-offset-4 col-md-4">
+        <div class="form-group">
+        <%= f.label :name,"名前",class:"text-user" %>
+        <%= f.text_field :name,class:"form-control",placeholder:"名前"%>
+       </div>
+        <div class="form-group">
+          <%= f.label :email,"メールアドレス",class:"text-user" %>
+          <%= f.email_field :email,class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password,"ログイン用パスワード",class:"text-user" %>
+          <%=f.password_field :password,class:"form-control",placeholder:"半角英小文字大文字数字をそれぞれ1種類以上含む" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation,"パスワード確認",class:"text-user" %>
+          <%= f.password_field :password_confirmation,class:"form-control" %> 
+        </div>
+         <%= f.submit "登録",class:"btn btn-block btn-black" %>
+       <% end %>
+      </div>
+    </div>
+  </div> 
+</div>
